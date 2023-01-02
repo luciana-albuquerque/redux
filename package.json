@@ -4,11 +4,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "classnames": "^2.3.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
@@ -18,5 +22,14 @@
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "typescript": "^4.1.2",
     "vite": "^2.3.5"
+  },
+  "jest": {
+    "testEnviroment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.ts"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "idendity-obj-proxy"
+    }
   }
 }
