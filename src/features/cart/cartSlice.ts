@@ -76,7 +76,6 @@ export const { addToCart, removeFromCart, updateQuantity } = cartSlice.actions;
 export default cartSlice.reducer;
 
 export function getNumItems(state: RootState) {
-  console.log("calling numItems");
   let numItems = 0;
   for (let id in state.cart.items) {
     numItems += state.cart.items[id];
